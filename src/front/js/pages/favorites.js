@@ -7,6 +7,19 @@ export const Favorites = () => {
     const [anime, setAnime] = useState({})
     const { id } = useParams();
 
+    const isFavorite = store.favorites.some(fav => fav.name === item.name && fav.category === category)
+    const handleFavorites = () => {
+        const isFavorite = store.favorites.some(fav => fav.name === item.name && fav.category === category)
+        if (isFavorite) {
+            const indexToDelete = store.favorites.findIndex(fav => fav.name === item.name && fav.category === category)
+            if (indexToDelete !== -1) {
+                actions.deleteFavorites(indexToDelete)
+            }
+        } else {
+            actions.addFavorites({ name: item.name, index, category })
+        }
+    }
+
     useEffect(() => {
         async function getAnime() {
             const response = await fetch("https://api.jikan.moe/v4/anime/" + id + "/full")
