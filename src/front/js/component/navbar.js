@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
 import logo from "../../img/Anime logo2.jpg";
 import "../../styles/navbar.css";
+
 export const Navbar = () => {
 	return (
 		<nav className="navbar bg-primary text-info">
@@ -13,7 +14,10 @@ export const Navbar = () => {
 				</Link>
 				<Link to="/mangaSearch" className="nav-item">
           			<a className="nav-link text-dark">Manga</a>
-        </Link>
+        		</Link>
+				<Link to="/Search">
+					<i className="fa-solid fa-magnifying-glass" style={{color: "black", fontSize: "35px"}}></i>
+				</Link>
 				<div className="ml-auto nav-item dropdown d-flex">
 					<a className="nav-link dropdown-toggle text-dark" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
           			<i className="icon fa-solid fa-bars"></i>
