@@ -33,6 +33,10 @@ export const Favorites = () => {
 		<div className="text-center mt-5 bg-dark">
             <div className="text-light">{anime.title}</div>
             <h1>Here is your Favorites page</h1>
+            <button className="btn-heart btn-outline-dark" onClick={handleFavorites} type="button">
+                <FontAwesomeIcon icon="fa-regular fa-heart" />
+                <i className="fa-solid" style={{ color: isFavorite ? "#cd1818" : "red" }}></i>
+            </button>
 		</div>
 	);
 };

@@ -68,7 +68,7 @@ const AnimeCard = ({ item, index, category }) => {
                     </Link>
                     
                     <button className="btn-heart btn-outline-dark" onClick={handleFavorites} type="button">
-                    <FontAwesomeIcon icon="fa-regular fa-heart" />
+                        <FontAwesomeIcon icon="fa-regular fa-heart" />
                         <i className="fa-solid" style={{ color: isFavorite ? "#cd1818" : "red" }}></i>
                     </button>
                 </div>
