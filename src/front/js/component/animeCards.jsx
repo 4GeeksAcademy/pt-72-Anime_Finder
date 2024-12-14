@@ -43,7 +43,7 @@ const AnimeCard = ({ item, index, category }) => {
                 <h5 className="card-title fw-bold">{item.name}</h5>
                 <p className="card-text">
                     {
-                        category == "characters" ? "Gender: " + item.gender :
+                        category == "anime" ? ": " + item.gender :
                             category == "planets" ? "Population: " + item.population :
                                 "Crew: " + item.crew
                     }

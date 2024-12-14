@@ -5,7 +5,7 @@ import logo from "../../img/Anime logo2.jpg";
 import "../../styles/navbar.css";
 export const Navbar = () => {
 	return (
-		<nav className="navbar bg-primary bs-info-bg-subtle text-info">
+		<nav className="navbar bg-primary text-info">
 			<div className="container">
 				<Link to="/"><img src={logo} style={{height: "55px"}} /></Link>
 				<Link to="/">

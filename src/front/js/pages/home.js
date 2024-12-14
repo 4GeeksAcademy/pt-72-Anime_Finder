@@ -12,7 +12,7 @@ export const Home = () => {
 	
 	
 	return (
-		<div className="main-div w-100 bg-dark">
+		<div className="main-div w-100">
 			<div className="d-flex flex-column w-100 mt-0 align-item-center">
 				{/* Anime card div */}
 				<h1 className="m-3">Popular Anime</h1> 
