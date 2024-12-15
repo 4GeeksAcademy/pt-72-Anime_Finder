@@ -44,14 +44,14 @@ const AnimeCard = ({ item, index, category }) => {
                 <p className="card-text">
                     {
                         category == "data" ? "images: " + item.images :
-                            category == "anime" ? "streaming: " + item.streaming :
+                            category == "anime" ? "genre: " + item.genre :
                                 "status: " + item.status
                     }
                 </p>
                 <p className="card-text">
                     {
-                        category == "characters" ? "Height: " + item.height :
-                            category == "planets" ? "Climate: " + item.climate :
+                        category == "data" ? "name: " + item.name :
+                            category == "anime" ? "streaming: " + item.streaming :
                                 "Model: " + item.model
                     }
                 </p>
