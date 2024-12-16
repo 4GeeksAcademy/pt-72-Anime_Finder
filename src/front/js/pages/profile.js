@@ -31,17 +31,16 @@ export const Profile = () => {
 
 	return (
 		<div className="text-center mt-5">
-			<Link to="/favorites">
-				<button className="btn btn-primary text-dark m-1">Favorites</button>
+			<Link to="/favAnime">
+				<button className="btn btn-primary text-dark m-1">Favorite Anime</button>
+			</Link>
+			<Link to="/favManga">
+				<button className="btn btn-primary text-dark m-1">Favorite Manga</button>
 			</Link>
 			{
 				store.token ?  
 				<div className="m-5 profile-Container">
 					<h1>Welcome Back</h1>
-					{/* <h3>{user.email}</h3> */}
-					{/* <Link to="/favorites">
-						<button className="btn btn-danger mt-1">Favorites</button>
-					</Link> */}
 					<h1 className="navbar-title">Anime Calendar</h1>
           			<MyCalendar />
 					  <button className="btn btn-danger mt-1" onClick={handleLogout}>Log Out</button>
