@@ -10,7 +10,7 @@ export const SearchManga = () => {
 	useEffect(() => {
 		async function searchManga() {
 			const response = await fetch(
-				`https://api.jikan.moe/v4/manga/${id}/streaming/full`
+				`https://api.jikan.moe/v4/manga`
 			);
 			const data = await response.json();
 			setStreaming(data.data);

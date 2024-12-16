@@ -22,7 +22,7 @@ export const Favorites = () => {
 
     useEffect(() => {
         async function getManga() {
-            const response = await fetch("https://api.jikan.moe/v4/anime/" + id + "/full")
+            const response = await fetch("https://api.jikan.moe/v4/manga/" + id + "/full")
             const data = await response.json()
             setManga(data.data)
         }

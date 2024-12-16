@@ -65,7 +65,7 @@ class Manga(db.Model):
             "streaming": self.hair_color,
         }
     
-    class FavoriteAnime(db.Model):
+class FavoriteAnime(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     user_id = db.Column(db.Integer, db.ForeignKey(User.id))
     anime_id = db.Column(db.Integer, db.ForeignKey(Anime.id))
@@ -77,7 +77,7 @@ class Manga(db.Model):
             "anime": self.people_id,
         }
     
-    class FavoriteManga(db.Model):
+class FavoriteManga(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     user_id = db.Column(db.Integer, db.ForeignKey(User.id))
     manga_id = db.Column(db.Integer, db.ForeignKey(Manga.id))

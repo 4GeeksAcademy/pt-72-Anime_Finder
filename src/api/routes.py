@@ -93,3 +93,43 @@ def delete_favanime(anime_id):
     db.session.commit()
     
     return jsonify({"message": "Anime removed from favorites"}), 200
+
+@api.route('/favoriteManga', methods=['POST'])
+@jwt_required()
+def create_favmanga():
+    user_email = get_jwt_identity()
+    user = User.query.filter_by(email=user_email).first()
+    request_fav_manga = request.get_json()
+
+    new_fav_manga = FavoriteManga(user_id=user.id, manga_id=request_fav_manga["manga"])
+    db.session.add(new_fav_manga)
+    db.session.commit()
+
+    return jsonify(request_fav_manga), 200 
+
+@api.route('/favoriteManga', methods=['GET'])
+@jwt_required()
+def get_favmanga():
+    user_email = get_jwt_identity()
+    user = User.query.filter_by(email = user_email)
+    fav_manga = FavoriteManga.query.filter_by(user_id=user.id).all()
+    all_favmanga = list(map(lambda x: x.serialize(), fav_manga))
+    return jsonify(all_favmanga), 200 
+
+
+@api.route('/favorite/manga/<int:anime_id>', methods=['DELETE'])
+@jwt_required()
+def delete_favmanga(manga_id):
+    user_email = get_jwt_identity()
+    user = User.query.filter_by(email=user_email).first()
+    if not user:
+        return jsonify({"error": "User not found"}), 404
+    
+    favmanga = FavoriteManga.query.filter_by(manga_id=manga_id, user_id=user.id).first()
+    if not favmanga:
+        return jsonify({"error": "No favorite records found for this manga"}), 404
+    
+    db.session.delete(favmanga)
+    db.session.commit()
+    
+    return jsonify({"message": "Anime removed from favorites"}), 200
