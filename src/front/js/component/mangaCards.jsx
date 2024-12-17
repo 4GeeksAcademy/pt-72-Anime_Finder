@@ -8,7 +8,7 @@ const MangaCard = ({ item, index, category }) => {
     const [imgErr, setImgErr] = useState(false);
 
     const handleImgErr = () => setImgErr(true);
-    const GUIDE_URL = "https://api.jikan.moe/v4/manga/{id}/pictures";
+    const GUIDE_URL = "https://api.jikan.moe/v4/manga/1/pictures";
     const getImageUrl = () => {
         if (category === "manga") {
             return store.animeImages[index] || noImage;
@@ -46,22 +46,8 @@ const MangaCard = ({ item, index, category }) => {
                 <p className="card-text">
                     {
                         category == "characters" ? "Gender: " + item.gender :
-                            category == "planets" ? "Population: " + item.population :
-                                "Crew: " + item.crew
-                    }
-                </p>
-                <p className="card-text">
-                    {
-                        category == "characters" ? "Height: " + item.height :
-                            category == "planets" ? "Climate: " + item.climate :
-                                "Model: " + item.model
-                    }
-                </p>
-                <p className="card-text mb-4">
-                    {
-                        category == "characters" ? "Birth Year: " + item.birth_year :
-                            category == "planets" ? "Terrain: " + item.terrain :
-                                "Passengers: " + item.passengers
+                            category == "manga" ? "genre: " + item.genre :
+                                "image: " + item.image
                     }
                 </p>
                 <div id="cardBtnGroup" className="d-flex justify-content-between mt-auto">

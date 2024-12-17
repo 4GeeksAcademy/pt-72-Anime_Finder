@@ -18,9 +18,9 @@ export const Home = () => {
 				<h1 className="m-3">Popular Anime</h1> 
 				<div id="cardDiv" className="d-flex flex-nowrap overflow-scroll align-items-stretch">
 					{store.anime.map((item, index) => {
-						// return (
-						// 	<AnimeCard item={item} index={index} key={index} category="anime" /> 
-						// )
+						//return (
+						//<AnimeCard item={item} index={index} key={index} category="anime" /> 
+						//)
 					})}
 				</div>
 			</div>
@@ -29,9 +29,9 @@ export const Home = () => {
 				<h1 className="m-2">Classic Anime</h1>
 				<div id="cardDiv" className="d-flex flex-nowrap overflow-scroll align-items-stretch">
 					{store.anime.map((item, index) => {
-						// return (
-						// 	<AnimeCard item={item} index={index} key={index} category="anime" />
-						// )
+						return (
+						<AnimeCard item={item} index={index} key={index} category="anime" />
+						)
 					})}
 				</div>
 			</div>
@@ -39,7 +39,7 @@ export const Home = () => {
 				{/* Anime card div */}
 				<h1 className="m-2">Popular Manga</h1>
 				<div id="cardDiv" className="d-flex flex-nowrap overflow-scroll align-items-stretch">
-					{store.mangaCharacters?.map((item, index) => {
+					{store.mangaCharacters.map((item, index) => {
 						console.log("item", item);
 						return (
 						<MangaCard item={item} index={index} key={index} category="manga" /> 

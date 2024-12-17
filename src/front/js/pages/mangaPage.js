@@ -10,12 +10,12 @@ export const mangaPage = () => {
     const { id } = useParams();
 
     useEffect(() => {
-        async function getmanga() {
-            const response = await fetch("https://api.jikan.moe/v4/manga/" + id + "/full")
+        async function getMangaImages() {
+            const response = await fetch("https://api.jikan.moe/v4/manga/1/pictures")
             const data = await response.json()
-            setmanga(data.data) 
+            setMangaImages(data.data) 
         }
-        getmanga() 
+        getMangaImages() 
     }, [])
 
     //function handleFindingStreamingService() {
@@ -29,9 +29,9 @@ export const mangaPage = () => {
 			{/* Anime card div */}
 			<h1 className="m-2">Popular Manga</h1>
 			<div id="cardDiv" className="d-flex flex-nowrap overflow-scroll align-items-stretch">
-				{store.manga.map((item, index) => {
+				{store.mangaImages.map((item, index) => {
 					return (
-						<MangaCard item={item} index={index} key={index} category="anime" /> 
+						<MangaCard item={item} index={index} key={index} category="manga" /> 
 					)
 				})}
 			</div>
