@@ -38,6 +38,7 @@ const MangaCard = ({ item, index, category }) => {
     return (
 
         <div className="card" >
+            <h1>Hello</h1>
             {/* <img src={`${GUIDE_URL}${category}/${index + 1}.jpg`} className="card-img-top" alt="img not available" /> */}
             <img src={getImageUrl()} onError={handleImgErr} style={imageStyle} className="card-img-top" alt="img not available" />
             <div className="card-body d-flex flex-column" id="cardBody">
