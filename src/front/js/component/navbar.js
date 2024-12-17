@@ -13,7 +13,7 @@ export const Navbar = () => {
 					<h1 className="navbar-brand text-dark mb-0 h1">Anime Finder</h1>
 				</Link>
 				<Link to="/mangaSearch" className="nav-item">
-          			<a className="nav-link text-dark">Manga</a>
+          			<span className="nav-link text-dark">Manga</span>
         		</Link>
 				<Link to="/Search">
 					<i className="fa-solid fa-magnifying-glass" style={{color: "black", fontSize: "35px"}}></i>

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import "../../styles/home.css";
 import { SearchAnime} from "./searchAnime";
 // import AnimeCard from "../component/animeCards.jsx";
-// import MangaCard from "../component/mangaCards.jsx";
+import MangaCard from "../component/mangaCards.jsx";
 
 export const Home = () => {
 	const { store, actions } = useContext(Context);
@@ -40,6 +40,7 @@ export const Home = () => {
 				<h1 className="m-2">Popular Manga</h1>
 				<div id="cardDiv" className="d-flex flex-nowrap overflow-scroll align-items-stretch">
 					{store.mangaCharacters.map((item, index) => {
+						console.log("item", item);
 						return (
 						<MangaCard item={item} index={index} key={index} category="manga" /> 
 						)
