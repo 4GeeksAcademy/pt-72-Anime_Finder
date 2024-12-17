@@ -3,7 +3,7 @@ import { Context } from "../store/appContext";
 import { Link } from "react-router-dom";
 import "../../styles/home.css";
 import { SearchAnime} from "./searchAnime";
-// import AnimeCard from "../component/animeCards.jsx";
+import AnimeCard from "../component/animeCards.jsx";
 import MangaCard from "../component/mangaCards.jsx";
 
 export const Home = () => {
@@ -18,9 +18,9 @@ export const Home = () => {
 				<h1 className="m-3">Popular Anime</h1> 
 				<div id="cardDiv" className="d-flex flex-nowrap overflow-scroll align-items-stretch">
 					{store.anime.map((item, index) => {
-						//return (
-						//<AnimeCard item={item} index={index} key={index} category="anime" /> 
-						//)
+						return (
+						<AnimeCard item={item} index={index} key={index} category="anime" /> 
+						)
 					})}
 				</div>
 			</div>

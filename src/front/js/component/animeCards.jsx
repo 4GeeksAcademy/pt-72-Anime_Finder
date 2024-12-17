@@ -8,7 +8,7 @@ const AnimeCard = ({ item, index, category }) => {
     const [imgErr, setImgErr] = useState(false);
 
     const handleImgErr = () => setImgErr(true);
-    const GUIDE_URL = "https://api.jikan.moe/v4/anime/{id}/pictures";
+    const GUIDE_URL = "https://api.jikan.moe/v4/anime/1/pictures";
     const getImageUrl = () => {
         if (category === "anime") {
             return store.animeImages[index] || noImage;
@@ -16,7 +16,7 @@ const AnimeCard = ({ item, index, category }) => {
 
     }
     const imageStyle = {
-        height: category === "starships" ? "180px" :
+        height: category === "anime" ? "180px" :
             category === "manga" ? "254px" :
                 "auto",
     };
