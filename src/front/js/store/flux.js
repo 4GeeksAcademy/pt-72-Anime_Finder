@@ -17,7 +17,7 @@ const getState = ({ getStore, getActions, setStore }) => {
       token: sessionStorage.getItem("token"),
       anime: [],
       favorites: [],
-      manga: [],
+      mangaCharacters: [],
     },
     actions: {
       // Use getActions to call a function within a fuction
@@ -48,9 +48,9 @@ const getState = ({ getStore, getActions, setStore }) => {
       },
 
     getManga: () => {
-        fetch("https://api.jikan.moe/v4/manga/{id}/full" + "manga")
+        fetch("https://api.jikan.moe/v4/manga/95/characters")
           .then((resp) => resp.json())
-          .then((data) => setStore({ planets: data.results }))
+          .then((response) => setStore({ mangaCharacters: response.data }))
           .catch((error) => console.log(error));
       },
     addFavorites: (favItem) => {
