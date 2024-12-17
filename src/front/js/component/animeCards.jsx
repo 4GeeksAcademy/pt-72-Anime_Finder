@@ -17,7 +17,7 @@ const AnimeCard = ({ item, index, category }) => {
     }
     const imageStyle = {
         height: category === "anime" ? "180px" :
-            category === "manga" ? "254px" :
+            category === "manga" ? "180px" :
                 "auto",
     };
 
@@ -46,20 +46,6 @@ const AnimeCard = ({ item, index, category }) => {
                         category == "data" ? "images: " + item.images :
                             category == "anime" ? "genre: " + item.genre :
                                 "status: " + item.status
-                    }
-                </p>
-                <p className="card-text">
-                    {
-                        category == "data" ? "name: " + item.name :
-                            category == "anime" ? "streaming: " + item.streaming :
-                                "Model: " + item.model
-                    }
-                </p>
-                <p className="card-text mb-4">
-                    {
-                        category == "characters" ? "Birth Year: " + item.birth_year :
-                            category == "planets" ? "Terrain: " + item.terrain :
-                                "Passengers: " + item.passengers
                     }
                 </p>
                 <div id="cardBtnGroup" className="d-flex justify-content-between mt-auto">
