@@ -48,7 +48,7 @@ const getState = ({ getStore, getActions, setStore }) => {
       },
 
     getManga: () => {
-        fetch(apiMangaUrl + "manga")
+        fetch("https://api.jikan.moe/v4/manga/{id}/full" + "manga")
           .then((resp) => resp.json())
           .then((data) => setStore({ planets: data.results }))
           .catch((error) => console.log(error));
