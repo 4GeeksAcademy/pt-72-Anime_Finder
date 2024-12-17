@@ -34,6 +34,7 @@ const MangaCard = ({ item, index, category }) => {
             actions.addFavorites({ name: item.name, index, category })
         }
     }
+    console.log(item)
     return (
 
         <div className="card" >
