@@ -31,9 +31,7 @@ export const AnimeCard = ({ item, index }) => {
         <p className="card-text">Type: {item.type || "N/A"}</p>
         <p className="card-text">Episodes: {item.episodes || "N/A"}</p>
         <div className="d-flex justify-content-between mt-auto">
-          <button
-            className="btn btn-warning me-3"
-            onClick={animePage}
+          <button className="btn btn-warning me-3"
             type="button"
             aria-label="View Series Info"
           >
