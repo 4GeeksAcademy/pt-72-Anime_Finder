@@ -44,7 +44,7 @@ export const Profile = () => {
 					<h1>Welcome Back</h1>
 					<h1 className="navbar-title">Anime Calendar</h1>
           			<MyCalendar />
-					  <button className="btn btn-danger mt-1" onClick={handleLogout}>Log Out</button>
+					  <button className="btn btn-danger m-5" onClick={handleLogout}>Log Out</button>
 				</div>
 				:
 				<div>
