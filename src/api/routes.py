@@ -154,7 +154,6 @@ def get_favanime():
             )
             if jikan_response.status_code == 200:
                 anime_data = jikan_response.json()["data"]
-                print(anime_data, "anime dataaaa")
                 detailed_favorites.append(
                     {
                         "anime_id": fav.anime_id,

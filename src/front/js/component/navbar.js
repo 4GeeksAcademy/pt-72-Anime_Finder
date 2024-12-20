@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
 import logo from "../../img/Anime logo2.jpg";
 import "../../styles/navbar.css";
+
 export const Navbar = () => {
   return (
     <nav className="navbar bg-primary bs-info-bg-subtle text-info">
@@ -13,8 +14,10 @@ export const Navbar = () => {
         <Link to="/">
           <h1 className="navbar-brand text-dark mb-0 h1">Anime Finder</h1>
         </Link>
-        <Link to="/mangaSearch" className="nav-item">
-          <a className="nav-link text-dark">Manga</a>
+        <Link to="/mangaHomePage" className="nav-item">
+          <a className="nav-link text-dark" style={{ textDecoration: "none" }}>
+            Manga
+          </a>
         </Link>
         <div className="ml-auto nav-item dropdown d-flex">
           <a
